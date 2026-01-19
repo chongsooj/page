@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AISH 전문가(Expert) 훈련과정</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        @import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
+
+        :root {
+            --bg-color: #000000;
+            --neon-teal: #00F5FF;
+            --zinc-800: #18181b;
+            --zinc-900: #09090b;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: #ffffff;
+            font-family: 'Pretendard', sans-serif;
+            line-height: 1.6;
+            word-break: keep-all;
+        }
+
+        /* Pinterest Style Outline & Bold Typography */
+        .font-outline {
+            -webkit-text-stroke: 1.5px rgba(255, 255, 255, 0.4);
+            color: transparent;
+        }
+
+        .section-border {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        /* Curriculum Hover Effect (Pinterest Style) */
+        .curriculum-item {
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+        }
+
+        .curriculum-item:hover {
+            background-color: #ffffff;
+            color: #000000;
+            padding-left: 2rem;
+            padding-right: 2rem;
+        }
+
+        .curriculum-item:hover .item-num {
+            color: rgba(0, 0, 0, 0.1);
+            -webkit-text-stroke: 1px #000;
+        }
+
+        .curriculum-item:hover .item-tag {
+            background-color: #000;
+            color: #fff;
+        }
+
+        .btn-black {
+            background: #ffffff;
+            color: #000000;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+        }
+
+        .btn-black:hover {
+            background: var(--neon-teal);
+            transform: translateY(-2px);
+        }
+
+        /* Custom Select Styling */
+        select {
+            appearance: none;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='black'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M19 9l-7 7-7-7'%3E%3C/path%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 1.5rem center;
+            background-size: 1.2em;
+        }
+
+        select option {
+            background-color: #ffffff;
+            color: #000000;
+        }
+
+        @keyframes marquee {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+
+        .marquee {
+            overflow: hidden;
+            white-space: nowrap;
+            background: #ffffff;
+            color: #000;
+            padding: 12px 0;
+            font-weight: 900;
+            font-style: italic;
+        }
+
+        .marquee-inner {
+            display: inline-block;
+            animation: marquee 30s linear infinite;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 mix-blend-difference px-8 py-8 flex justify-between items-center">
+        <div class="text-2xl font-black tracking-tighter italic">AISH/EXPERT</div>
+        <div class="hidden md:flex gap-10 text-[10px] font-black uppercase tracking-[0.2em]">
+            <a href="#curriculum" class="hover:text-cyan-400 transition-colors">Curriculum</a>
+            <a href="#info" class="hover:text-cyan-400 transition-colors">Information</a>
+            <a href="#apply" class="hover:text-cyan-400 transition-colors">Apply</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative min-h-screen flex flex-col justify-center px-8">
+        <div class="container mx-auto">
+            <div class="inline-block py-1 px-3 bg-white text-black text-[10px] font-black uppercase tracking-widest mb-8">
+                Exclusive for Intermediate Graduates
+            </div>
+            <h1 class="text-[14vw] md:text-[10vw] font-black leading-[0.85] tracking-tighter mb-12">
+                BEYOND <br> 
+                <span class="font-outline italic">KNOWLEDGE</span>
+            </h1>
+            <div class="grid md:grid-cols-2 gap-16 items-end">
+                <div class="space-y-6">
+                    <p class="text-2xl md:text-3xl font-bold leading-tight">
+                        배운 기술을 실질적인 <br> 
+                        <span class="text-zinc-500 font-outline">비즈니스 자산</span>으로 전환하십시오.
+                    </p>
+                    <p class="text-zinc-500 max-w-sm">
+                        단순 툴 사용법을 넘어 결과물을 도출하는 5주간의 하이엔드 훈련 과정입니다.
+                    </p>
+                </div>
+                <div class="flex md:justify-end">
+                    <a href="#apply" class="btn-black px-12 py-6 rounded-none font-black text-xl shadow-2xl">
+                        START THE CHANGE
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Marquee -->
+    <div class="marquee border-y border-white">
+        <div class="marquee-inner">
+            <span>AISH EXPERT TRAINING 2026 • 5 WEEKS TRANSFORMATION • LIMITED TO 30 SEATS • AI AUTOMATION • E-BOOK PUBLISHING • LANDING PAGE EXPERT • </span>
+            <span>AISH EXPERT TRAINING 2026 • 5 WEEKS TRANSFORMATION • LIMITED TO 30 SEATS • AI AUTOMATION • E-BOOK PUBLISHING • LANDING PAGE EXPERT • </span>
+        </div>
+    </div>
+
+    <!-- Pain Point Section -->
+    <section class="py-40 px-8">
+        <div class="container mx-auto">
+            <div class="max-w-4xl">
+                <h2 class="text-5xl md:text-8xl font-black tracking-tighter mb-16 leading-[0.9]">
+                    IS IT REAL <br> <span class="text-zinc-700">EXPERTISE?</span>
+                </h2>
+                <div class="grid md:grid-cols-2 gap-12 text-zinc-400 text-lg">
+                    <p>
+                        수많은 강의를 들었지만, 정작 실무에서 무엇을 먼저 시작해야 할지 모르겠다면 그것은 아직 당신의 것이 아닙니다. 
+                    </p>
+                    <p>
+                        AISH 전문가 과정은 '만들어보는 것'에 모든 화력을 집중합니다. 5주 후, 당신의 손에는 실제 시장에서 가동되는 결과물이 남을 것입니다.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Curriculum Section -->
+    <section id="curriculum" class="section-border bg-zinc-950">
+        <div class="container mx-auto px-8 py-24">
+            <div class="flex justify-between items-end mb-24">
+                <h2 class="text-6xl md:text-8xl font-black tracking-tighter uppercase italic">Modules</h2>
+                <div class="text-right hidden md:block">
+                    <p class="text-[10px] font-black text-zinc-500 uppercase tracking-widest mb-2">Curriculum Strategy</p>
+                    <p class="text-xl font-bold">8 CORE BUSINESS ASSETS</p>
+                </div>
+            </div>
+
+            <!-- List Starts -->
+            <div class="border-t border-white/10">
+                <!-- Item 01 -->
+                <div class="curriculum-item py-10 flex flex-col md:flex-row md:items-center justify-between group cursor-default">
+                    <div class="flex items-center gap-12 mb-6 md:mb-0">
+                        <span class="item-num text-4xl font-black opacity-20 tracking-tighter transition-all">01</span>
+                        <div>
+                            <span class="item-tag text-[10px] font-bold border border-zinc-700 px-2 py-1 rounded-full mb-2 inline-block transition-all">STRATEGY</span>
+                            <h3 class="text-3xl font-black tracking-tighter">정부과제 사업계획서</h3>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-4">
+                        <p class="text-zinc-500 group-hover:text-black hidden md:block">AI 기반 고승인율 기획 전략</p>
+                        <i class="fas fa-arrow-right text-xl opacity-0 group-hover:opacity-100 transition-opacity"></i>
+                    </div>
+                </div>
+                <!-- Item 02 -->
+                <div class="curriculum-item py-10 flex flex-col md:flex-row md:items-center justify-between group cursor-default">
+                    <div class="flex items-center gap-12 mb-6 md:mb-0">
+                        <span class="item-num text-4xl font-black opacity-20 tracking-tighter transition-all">02</span>
+                        <div>
+                            <span class="item-tag text-[10px] font-bold border border-zinc-700 px-2 py-1 rounded-full mb-2 inline-block transition-all">VIDEO</span>
+                            <h3 class="text-3xl font-black tracking-tighter">유튜브 CF 마스터</h3>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-4">
+                        <p class="text-zinc-500 group-hover:text-black hidden md:block">고효율 숏폼 및 제품 홍보영상</p>
+                        <i class="fas fa-arrow-right text-xl opacity-0 group-hover:opacity-100 transition-opacity"></i>
+                    </div>
+                </div>
+                <!-- Item 03 -->
+                <div class="curriculum-item py-10 flex flex-col md:flex-row md:items-center justify-between group cursor-default">
+                    <div class="flex items-center gap-12 mb-6 md:mb-0">
+                        <span class="item-num text-4xl font-black opacity-20 tracking-tighter transition-all">03</span>
+                        <div>
+                            <span class="item-tag text-[10px] font-bold border border-zinc-700 px-2 py-1 rounded-full mb-2 inline-block transition-all">PUBLISHING</span>
+                            <h3 class="text-3xl font-black tracking-tighter">교보문고 전자책 출간</h3>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-4">
+                        <p class="text-zinc-500 group-hover:text-black hidden md:block">5주 완성 작가 데뷔 프로세스</p>
+                        <i class="fas fa-arrow-right text-xl opacity-0 group-hover:opacity-100 transition-opacity"></i>
+                    </div>
+                </div>
+                <!-- Item 04 -->
+                <div class="curriculum-item py-10 flex flex-col md:flex-row md:items-center justify-between group cursor-default">
+                    <div class="flex items-center gap-12 mb-6 md:mb-0">
+                        <span class="item-num text-4xl font-black opacity-20 tracking-tighter transition-all">04</span>
+                        <div>
+                            <span class="item-tag text-[10px] font-bold border border-zinc-700 px-2 py-1 rounded-full mb-2 inline-block transition-all">WEB</span>
+                            <h3 class="text-3xl font-black tracking-tighter">1시간 랜딩페이지</h3>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-4">
+                        <p class="text-zinc-500 group-hover:text-black hidden md:block">전환율 중심의 세일즈 웹 구축</p>
+                        <i class="fas fa-arrow-right text-xl opacity-0 group-hover:opacity-100 transition-opacity"></i>
+                    </div>
+                </div>
+                <!-- Item 05 -->
+                <div class="curriculum-item py-10 flex flex-col md:flex-row md:items-center justify-between group cursor-default">
+                    <div class="flex items-center gap-12 mb-6 md:mb-0">
+                        <span class="item-num text-4xl font-black opacity-20 tracking-tighter transition-all">05</span>
+                        <div>
+                            <span class="item-tag text-[10px] font-bold border border-zinc-700 px-2 py-1 rounded-full mb-2 inline-block transition-all">AUTOMATION</span>
+                            <h3 class="text-3xl font-black tracking-tighter">업무자동화 에이전트</h3>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-4">
+                        <p class="text-zinc-500 group-hover:text-black hidden md:block">나만을 위한 24/7 AI 비서</p>
+                        <i class="fas fa-arrow-right text-xl opacity-0 group-hover:opacity-100 transition-opacity"></i>
+                    </div>
+                </div>
+                <!-- Item 06-08... (동일 패턴) -->
+                <div class="curriculum-item py-10 flex flex-col md:flex-row md:items-center justify-between group cursor-default">
+                    <div class="flex items-center gap-12 mb-6 md:mb-0">
+                        <span class="item-num text-4xl font-black opacity-20 tracking-tighter transition-all">06</span>
+                        <div>
+                            <span class="item-tag text-[10px] font-bold border border-zinc-700 px-2 py-1 rounded-full mb-2 inline-block transition-all">DATA</span>
+                            <h3 class="text-3xl font-black tracking-tighter">Notebook LM 제안서</h3>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-4">
+                        <p class="text-zinc-500 group-hover:text-black hidden md:block">데이터 학습 기반 기획의 혁신</p>
+                        <i class="fas fa-arrow-right text-xl opacity-0 group-hover:opacity-100 transition-opacity"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Training Info -->
+    <section id="info" class="section-border py-32 px-8">
+        <div class="container mx-auto">
+            <div class="grid lg:grid-cols-3 gap-16">
+                <div class="lg:col-span-2">
+                    <h2 class="text-5xl md:text-7xl font-black tracking-tighter mb-12 uppercase italic">Training <br> Logistics</h2>
+                    <div class="grid md:grid-cols-2 gap-12 border-t border-white/10 pt-12">
+                        <div>
+                            <h4 class="text-zinc-500 text-[10px] font-black uppercase mb-4 tracking-widest">Schedule</h4>
+                            <p class="text-2xl font-bold">2026.02.11 - 03.18</p>
+                            <p class="text-zinc-500 mt-2">5주간의 집중 훈련 프로세스</p>
+                        </div>
+                        <div>
+                            <h4 class="text-zinc-500 text-[10px] font-black uppercase mb-4 tracking-widest">Time</h4>
+                            <p class="text-2xl font-bold">화/목 21:00 - 23:00</p>
+                            <p class="text-zinc-500 mt-2">직장인을 위한 최적의 시간대</p>
+                        </div>
+                        <div>
+                            <h4 class="text-zinc-500 text-[10px] font-black uppercase mb-4 tracking-widest">Method</h4>
+                            <p class="text-2xl font-bold">Online Live Class</p>
+                            <p class="text-zinc-500 mt-2">Zoom 실시간 코칭 및 피드백</p>
+                        </div>
+                        <div>
+                            <h4 class="text-zinc-500 text-[10px] font-black uppercase mb-4 tracking-widest">Target</h4>
+                            <p class="text-2xl font-bold">Graduates Only</p>
+                            <p class="text-zinc-500 mt-2">AISH 중급 과정 수료생 대상</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white text-black p-10 flex flex-col justify-between">
+                    <div>
+                        <i class="fas fa-quote-left text-4xl mb-6 opacity-20"></i>
+                        <p class="text-xl font-black leading-tight mb-8">
+                            "전문가는 결과물로 <br> 자신을 증명합니다."
+                        </p>
+                    </div>
+                    <div class="border-t border-black/10 pt-6">
+                        <p class="text-sm font-bold tracking-tighter">AISH 교육위원회</p>
+                        <p class="text-[10px] uppercase opacity-60">Expert Certification Board</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Application Form -->
+    <section id="apply" class="section-border bg-white text-black py-40 px-8">
+        <div class="container mx-auto max-w-4xl">
+            <div class="text-center mb-24">
+                <span class="text-[10px] font-black uppercase tracking-[0.3em] border-b-2 border-black pb-1 mb-6 inline-block">Application</span>
+                <h2 class="text-6xl md:text-8xl font-black tracking-tighter leading-[0.9] mt-6">JOIN THE <br> EXPERTS.</h2>
+            </div>
+
+            <form id="applyForm" class="space-y-12">
+                <div class="grid md:grid-cols-2 gap-12">
+                    <div class="border-b-2 border-zinc-200 focus-within:border-black transition-all">
+                        <label class="text-[10px] font-black uppercase tracking-widest text-zinc-400">01 Full Name</label>
+                        <input type="text" id="name" required class="w-full bg-transparent py-4 text-2xl font-bold outline-none" placeholder="성함">
+                    </div>
+                    <div class="border-b-2 border-zinc-200 focus-within:border-black transition-all">
+                        <label class="text-[10px] font-black uppercase tracking-widest text-zinc-400">02 Mobile Number</label>
+                        <input type="tel" id="phone" required class="w-full bg-transparent py-4 text-2xl font-bold outline-none" placeholder="010-0000-0000">
+                    </div>
+                </div>
+                <div class="border-b-2 border-zinc-200 focus-within:border-black transition-all">
+                    <label class="text-[10px] font-black uppercase tracking-widest text-zinc-400">03 Email Address</label>
+                    <input type="email" id="email" required class="w-full bg-transparent py-4 text-2xl font-bold outline-none" placeholder="hello@world.com">
+                </div>
+                <div class="border-b-2 border-zinc-200 focus-within:border-black transition-all">
+                    <label class="text-[10px] font-black uppercase tracking-widest text-zinc-400">04 Module Choice</label>
+                    <select id="course" required class="w-full bg-transparent py-4 text-2xl font-bold outline-none cursor-pointer">
+                        <option value="" disabled selected>과정을 선택해 주세요</option>
+                        <option value="1">정부과제 사업계획서 전문가</option>
+                        <option value="2">유튜브 CF 제작 마스터</option>
+                        <option value="3">교보문고 전자책 출간</option>
+                        <option value="4">1시간 랜딩페이지 완성</option>
+                        <option value="5">AI 업무자동화 에이전트</option>
+                        <option value="6">Notebook LM 제안서 마스터</option>
+                        <option value="7">구글워크스페이스 정복</option>
+                        <option value="8">AI 통합 홍보영상 솔루션</option>
+                    </select>
+                </div>
+                <div class="pt-12">
+                    <button type="submit" class="w-full bg-black text-white py-8 text-2xl font-black uppercase tracking-widest hover:bg-zinc-800 transition-all">
+                        Submit Application
+                    </button>
+                    <p class="text-center text-[10px] text-zinc-400 mt-6 font-bold uppercase tracking-widest">
+                        신청 접수 후 24시간 이내로 안내 문자가 발송됩니다.
+                    </p>
+                </div>
+            </form>
+
+            <div id="successMsg" class="hidden mt-12 p-10 border-4 border-black text-center animate-pulse">
+                <h3 class="text-4xl font-black italic tracking-tighter mb-2 uppercase">Success!</h3>
+                <p class="font-bold">당신의 도전이 접수되었습니다. 곧 뵙겠습니다.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-24 px-8 border-t border-white/10">
+        <div class="container mx-auto flex flex-col md:flex-row justify-between items-start md:items-end gap-12">
+            <div>
+                <h3 class="text-5xl font-black italic tracking-tighter mb-6">AISH.</h3>
+                <p class="text-zinc-600 max-w-sm font-medium">
+                    AI 전문가 교육의 새로운 기준. <br> 우리는 당신의 가치를 기술로 증명합니다.
+                </p>
+            </div>
+            <div class="text-right">
+                <div class="flex gap-8 mb-8 justify-end text-[10px] font-black uppercase tracking-[0.2em] text-zinc-500">
+                    <a href="#" class="hover:text-white">Instagram</a>
+                    <a href="#" class="hover:text-white">LinkedIn</a>
+                    <a href="#" class="hover:text-white">Terms</a>
+                </div>
+                <p class="text-zinc-700 text-[10px] font-bold uppercase tracking-widest">© 2026 AISH ACADEMY. ALL RIGHTS RESERVED.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Form Handling
+        document.getElementById('applyForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            this.style.opacity = '0.1';
+            this.style.pointerEvents = 'none';
+            document.getElementById('successMsg').classList.remove('hidden');
+        });
+
+        // Smooth Scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    window.scrollTo({
+                        top: target.offsetTop,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
